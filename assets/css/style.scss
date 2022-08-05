@@ -1,0 +1,114 @@
+$darkBlue: #1a2036;
+$blue: #252b42;
+$lightBlue: #b1b9d8;
+
+$menuItemsBlue: #242b42;
+
+*{
+    font-family: "Merriweather", serif;
+} 
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: $darkBlue;
+    height: 100vh;
+    @include center;
+    .container {
+        background-color: $blue;
+        border-radius: 25px;
+        padding: 35px 60px 35px 35px;
+        .menu {
+            background-color: $darkBlue;
+            border-radius: 20px;
+            @include center;
+            height: 100%;
+            .icon {
+                padding: 13px;
+                border-radius: 10px;
+                &.icon1 {}
+                &.icon2 {
+                    background-color: $menuItemsBlue;
+                }
+            }
+        }
+        .groups {
+            .groups--header {
+                .groups--header-name {
+                    display: flex;
+                    justify-content: flex-start;
+                    .name {
+                        @include center;
+                        img {
+                            width: 32px;
+                            height: 32px;
+                        }
+                        span {
+                            font-size: 26px;
+                            color: $lightBlue;
+                        }
+                    }
+                }
+                .groups--header-icon {
+                    display: flex;
+                    justify-content: flex-end;
+                    .icons {
+                        display: flex;
+                        background-color: $darkBlue;
+                        border-radius: 20px;
+                        border: 3px solid $darkBlue;
+                        .icon {
+                            padding: 10px;
+                            border-radius: 0 20px 20px 0;
+                            &.icon1 {
+                            }
+                            &.icon2 {
+                                background-color: $blue;
+                            }
+                        }
+                    }
+                }
+            }
+            .groups--card {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 35px;
+                .groups--card-list {
+                    margin-bottom: 20px;
+                    display: flex;
+                    align-items: stretch;
+                    .card {
+                        @include center;
+                        padding: 50px;
+                        width: 100%;
+                        border-radius: 10px;
+                        background-color: #2e3650;
+                        color: $lightBlue;
+                        .card-image {
+                            width: max-content;
+                            &.add {
+                                background-color: $darkBlue;
+                                border-radius: 50%;
+                                padding: 12px;
+                            }
+                        }
+                        .card-body {
+                            @include center;
+                            flex-direction: column;
+                            font-size: 14px;
+                            .card-text {
+                                font-weight: 700;
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
