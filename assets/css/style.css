@@ -73,6 +73,12 @@ body .container .groups .groups--card .groups--card-list {
   display: flex;
   align-items: stretch;
 }
+body .container .groups .groups--card .groups--card-list .circle {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #8E66FF;
+}
 body .container .groups .groups--card .groups--card-list .card {
   display: flex;
   justify-content: center;

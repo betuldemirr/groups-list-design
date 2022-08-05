@@ -81,6 +81,13 @@ body {
                     margin-bottom: 20px;
                     display: flex;
                     align-items: stretch;
+                    .circle {
+                        width: 11px;
+                        height: 11px;
+                        border-radius: 50%;
+                        background-color: #8E66FF;
+                        
+                    }
                     .card {
                         @include center;
                         padding: 50px;
