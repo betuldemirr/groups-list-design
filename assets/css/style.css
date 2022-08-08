@@ -4,7 +4,7 @@
 
 body {
   background-color: #1a2036;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,15 +12,19 @@ body {
 body .container {
   background-color: #252b42;
   border-radius: 25px;
-  padding: 35px 60px 35px 35px;
+  padding: 35px;
 }
 body .container .menu {
   background-color: #1a2036;
-  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 20px;
+  padding: 15px;
   height: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 body .container .menu .icon {
   padding: 13px;
@@ -28,6 +32,9 @@ body .container .menu .icon {
 }
 body .container .menu .icon.icon2 {
   background-color: #242b42;
+}
+body .container .menu .icon:hover {
+  transform: scale(1.1);
 }
 body .container .groups .groups--header .groups--header-name {
   display: flex;
@@ -73,31 +80,34 @@ body .container .groups .groups--card .groups--card-list {
   display: flex;
   align-items: stretch;
 }
-body .container .groups .groups--card .groups--card-list .circle {
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background-color: #8E66FF;
-}
 body .container .groups .groups--card .groups--card-list .card {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  position: relative;
+  padding: 50px 0;
   width: 100%;
   border-radius: 10px;
   background-color: #2e3650;
   color: #b1b9d8;
 }
-body .container .groups .groups--card .groups--card-list .card .card-image {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+body .container .groups .groups--card .groups--card-list .card .circle {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #8e66ff;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  right: 12px;
+  top: 12px;
 }
 body .container .groups .groups--card .groups--card-list .card .card-image.add {
   background-color: #1a2036;
   border-radius: 50%;
   padding: 12px;
+  cursor: pointer;
 }
 body .container .groups .groups--card .groups--card-list .card .card-body {
   display: flex;
@@ -105,8 +115,63 @@ body .container .groups .groups--card .groups--card-list .card .card-body {
   align-items: center;
   flex-direction: column;
   font-size: 14px;
+  text-align: center;
 }
 body .container .groups .groups--card .groups--card-list .card .card-body .card-text {
   font-weight: 700;
   font-size: 20px;
-}/*# sourceMappingURL=style.css.map */
+}
+body .container .groups .groups--card .groups--card-list .card:hover {
+  transform: scale(0.98);
+}
+body .container .groups .groups--card .groups--card-list .card:hover img {
+  transform: scale(1.1);
+}
+
+@media (max-width: 575px) {
+  body .container {
+    margin: 35px;
+  }
+  body .container .menu {
+    width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    margin-bottom: 20px;
+  }
+  body .container .menu .menu--icons {
+    display: flex;
+    flex-direction: row;
+  }
+}
+/* responsive css
+@media (max-width: 575px) { }
+// Small-medium devices 
+@media (min-width: 576px) and (max-width: 767px) { }
+//Medium-large devices
+@media (min-width: 768px) and (max-width: 992px) { }
+// Large devices (992px and up)
+
+@media (max-width: 1200px) {
+
+
+}
+.row {
+    .menu-top {
+        background-color: red;
+        border-radius: 20px;
+        height: 100%;
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        .icon {
+            padding: 13px;
+            border-radius: 10px;
+            &.icon1 {}
+            &.icon2 {
+                background-color: $menuItemsBlue;
+            }
+        }
+    }
+}
+*//*# sourceMappingURL=style.css.map */
