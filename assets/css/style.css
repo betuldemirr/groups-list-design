@@ -26,14 +26,17 @@ body .container .menu {
   width: -moz-max-content;
   width: max-content;
 }
-body .container .menu .icon {
+body .container .menu .menu--icons div {
   padding: 13px;
   border-radius: 10px;
 }
-body .container .menu .icon.icon2 {
-  background-color: #242b42;
+body .container .menu .menu--icons div img {
+  pointer-events: none;
 }
-body .container .menu .icon:hover {
+body .container .menu .menu--icons .active {
+  background-color: #252b42;
+}
+body .container .menu .menu--icons .icon:hover {
   transform: scale(1.1);
 }
 body .container .groups .groups--header .groups--header-name {
@@ -57,17 +60,21 @@ body .container .groups .groups--header .groups--header-icon {
   display: flex;
   justify-content: flex-end;
 }
-body .container .groups .groups--header .groups--header-icon .icons {
+body .container .groups .groups--header .groups--header-icon #header-icons {
   display: flex;
   background-color: #1a2036;
   border-radius: 20px;
   border: 3px solid #1a2036;
 }
-body .container .groups .groups--header .groups--header-icon .icons .icon {
+body .container .groups .groups--header .groups--header-icon #header-icons div {
   padding: 10px;
-  border-radius: 0 20px 20px 0;
+  border-radius: 20px;
+  cursor: pointer;
 }
-body .container .groups .groups--header .groups--header-icon .icons .icon.icon2 {
+body .container .groups .groups--header .groups--header-icon #header-icons div img {
+  pointer-events: none;
+}
+body .container .groups .groups--header .groups--header-icon #header-icons .active {
   background-color: #252b42;
 }
 body .container .groups .groups--card {

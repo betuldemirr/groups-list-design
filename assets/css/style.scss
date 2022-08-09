@@ -29,17 +29,20 @@ body {
             padding: 15px;
             height: 100%;
             width: max-content;
-            .icon {
-                padding: 13px;
-                border-radius: 10px;
-                &.icon1 {
+            .menu--icons {
+                div {
+                    padding: 13px;
+                    border-radius: 10px;
+                    img {
+                        pointer-events: none;
+                    }
                 }
-                &.icon2 {
-                    background-color: $menuItemsBlue;
+                .active {
+                    background-color: $blue;
                 }
-            }
-            .icon:hover {
-                transform: scale(1.1);
+                .icon:hover {
+                    transform: scale(1.1);
+                }
             }
         }
         .groups {
@@ -62,19 +65,21 @@ body {
                 .groups--header-icon {
                     display: flex;
                     justify-content: flex-end;
-                    .icons {
+                    #header-icons {
                         display: flex;
                         background-color: $darkBlue;
                         border-radius: 20px;
                         border: 3px solid $darkBlue;
-                        .icon {
+                        div {
                             padding: 10px;
-                            border-radius: 0 20px 20px 0;
-                            &.icon1 {
+                            border-radius: 20px;
+                            cursor: pointer;
+                            img {
+                                pointer-events: none;
                             }
-                            &.icon2 {
-                                background-color: $blue;
-                            }
+                        }
+                        .active {
+                            background-color: $blue;
                         }
                     }
                 }
