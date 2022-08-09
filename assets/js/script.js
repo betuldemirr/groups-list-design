@@ -1,14 +1,24 @@
-function handle2Click(e) {
-    const h1_active = document.querySelector(".menu--icons .active");
-    if(h1_active !==null){
-        h1_active.classList.remove("active");
+window.addEventListener("DOMContentLoaded", function(){
+ 
+    const el1 = document.querySelectorAll(".menu--icons div");
+    for (let k = 0; k < el1.length; k++) {
+        el1[k].onclick = function() {
+            var d = 0;
+            while (d < el1.length) {
+                el1[d++].className = 'icon';
+            }
+            el1[k].className = 'icon active';
+        };
     }
-   e.target.className = "active";
-}
-function handleClick(e) {
-    const h2_active = document.querySelector(".header-icons .active");
-    if(h2_active !==null){
-        h2_active.classList.remove("active");
+
+    const el2 = document.querySelectorAll(".header-icons div");
+    for (let i = 0; i < el2.length; i++) {
+        el2[i].onclick = function() {
+            var c = 0;
+            while (c < el2.length) {
+                el2[c++].className = 'icon';
+            }
+            el2[i].className = 'icon active';
+        };
     }
-   e.target.className = "active";
-}
+})
