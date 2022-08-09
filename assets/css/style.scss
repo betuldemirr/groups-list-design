@@ -1,7 +1,6 @@
 $darkBlue: #1a2036;
 $blue: #252b42;
 $lightBlue: #b1b9d8;
-
 $menuItemsBlue: #242b42;
 
 * {
@@ -65,7 +64,7 @@ body {
                 .groups--header-icon {
                     display: flex;
                     justify-content: flex-end;
-                    #header-icons {
+                    .header-icons {
                         display: flex;
                         background-color: $darkBlue;
                         border-radius: 20px;
@@ -142,7 +141,6 @@ body {
         }
     }
 }
-
 @media (max-width: 575px) {
     body {
         .container {
@@ -159,35 +157,3 @@ body {
         }
     }
 }
-
-/* responsive css
-@media (max-width: 575px) { }
-// Small-medium devices 
-@media (min-width: 576px) and (max-width: 767px) { }
-//Medium-large devices
-@media (min-width: 768px) and (max-width: 992px) { }
-// Large devices (992px and up)
-
-@media (max-width: 1200px) {
-    
-    
-}
-.row {
-    .menu-top {
-        background-color: red;
-        border-radius: 20px;
-        height: 100%;
-        width: max-content;
-        display: flex;
-        flex-direction: row;
-        .icon {
-            padding: 13px;
-            border-radius: 10px;
-            &.icon1 {}
-            &.icon2 {
-                background-color: $menuItemsBlue;
-            }
-        }
-    }
-}
-*/
